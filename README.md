@@ -36,7 +36,7 @@ A comprehensive collection of scripting utilities designed to streamline develop
 
 
 ## **🚀 Overview**
-<details>
+<details open>
 <summary><b>📚 Project Documentation Index</b></summary>
 <br>
 
