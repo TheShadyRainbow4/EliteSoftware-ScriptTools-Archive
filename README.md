@@ -95,6 +95,7 @@ A comprehensive collection of scripting utilities designed to streamline develop
 * [HTML File Launcher](PowerShell-Script_Archive/Launcher%20&%20Automation/HTML%20File%20Launcher/README.md)
 * [HTML Project Launcher](PowerShell-Script_Archive/Launcher%20&%20Automation/HTML%20Project%20Launcher/README.md)
 * [Script Launcher](PowerShell-Script_Archive/Launcher%20&%20Automation/Script%20Launcher/README.md)
+* [Universal Project Launcher Suite](PowerShell-Script_Archive/Launcher%20&%20Automation/Universal%20Project%20Launcher%20Suite/README.md)
 
 ### **Miscellaneous**
 * [Active Development Staging](PowerShell-Script_Archive/Miscellaneous/Active%20Development%20Staging/README.md)
@@ -114,6 +115,7 @@ A comprehensive collection of scripting utilities designed to streamline develop
 * [Network Manager](PowerShell-Script_Archive/Networking%20&%20Web%20Tools/Network%20Manager/README.md)
 
 ### **System Utilities & Management**
+* [Adobe Genuine Service Remover](PowerShell-Script_Archive/System%20Utilities%20&%20Management/Adobe%20Genuine%20Service%20Remover/README.md)
 * [Advanced Startup Manager Elite](PowerShell-Script_Archive/System%20Utilities%20&%20Management/Advanced%20Startup%20Manager%20Elite/README.md)
 * [Advanced StartupManager](PowerShell-Script_Archive/System%20Utilities%20&%20Management/Advanced%20StartupManager/README.md)
 * [AppMonitor](PowerShell-Script_Archive/System%20Utilities%20&%20Management/AppMonitor/README.md)
@@ -124,6 +126,7 @@ A comprehensive collection of scripting utilities designed to streamline develop
 * [IE11 Enabler for Windows 11](PowerShell-Script_Archive/System%20Utilities%20&%20Management/IE11%20Enabler%20for%20Windows%2011/README.md)
 * [Internet Explorer Fixer](PowerShell-Script_Archive/System%20Utilities%20&%20Management/Internet%20Explorer%20Fixer/README.md)
 * [Launch As Trusted Installer](PowerShell-Script_Archive/System%20Utilities%20&%20Management/Launch%20As%20Trusted%20Installer/README.md)
+* [Launch IE11](PowerShell-Script_Archive/System%20Utilities%20&%20Management/Launch%20IE11/README.md)
 * [Local Group Policy Backup](PowerShell-Script_Archive/System%20Utilities%20&%20Management/Local%20Group%20Policy%20Backup/README.md)
 * [MSDT Preservation Tool](PowerShell-Script_Archive/System%20Utilities%20&%20Management/MSDT%20Preservation%20Tool/README.md)
 * [Registry Backup](PowerShell-Script_Archive/System%20Utilities%20&%20Management/Registry%20Backup/README.md)
