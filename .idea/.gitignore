@@ -1,0 +1,25 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Ignored default folder with query files
+/queries/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+*.lnk
+desktop.ini
+gemini.md
+.git
+.github
+GEMINI-CLI - Launcher.PS1
+.geminiignore
+EXAMPLE-README.MD
+thumbs.db
+Untitled
+Untitled (1).PS1
+Untitled (2).PS1
+
+/PowerShell-Script_Archive/Multimedia & MP3 Tools/MP3Toolkit_Config/Log Files
+/PowerShell-Script_Archive/Multimedia & MP3 Tools/MP3 Toolkit/MP3Toolkit_Config/Log Files
