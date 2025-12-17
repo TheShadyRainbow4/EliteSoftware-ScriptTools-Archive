@@ -53,7 +53,6 @@ A comprehensive collection of scripting utilities designed to streamline develop
 * [DotNet Environment Manager](PowerShell-Script_Archive/Development%20&%20IT%20Tools/DotNet%20Environment%20Manager/README.md)
 * [EliteSoftware Manager](PowerShell-Script_Archive/Development%20&%20IT%20Tools/EliteSoftware%20Manager/README.md)
 * [EliteScriptConverter](PowerShell-Script_Archive/Development%20&%20IT%20Tools/Script%20to%20txt%20-%20json%20-%20xml%20--%20Converter/README.md)
-* [Get Relative Path](PowerShell-Script_Archive/Development%20&%20IT%20Tools/Get%20Relative%20Path/README.md)
 * [Install Pyenv Win](PowerShell-Script_Archive/Development%20&%20IT%20Tools/Install%20Pyenv%20Win/README.md)
 * [Install Visual Studio Build Tools](PowerShell-Script_Archive/Development%20&%20IT%20Tools/Install%20Visual%20Studio%20Build%20Tools/README.md)
 * [Local AI Chat](PowerShell-Script_Archive/Development%20&%20IT%20Tools/Local%20AI%20Chat/README.md)
