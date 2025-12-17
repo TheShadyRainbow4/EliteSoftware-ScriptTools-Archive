@@ -36,43 +36,6 @@ A comprehensive collection of scripting utilities designed to streamline develop
 
 
 ## **🚀 Overview**
-
-Welcome to the **EliteSoftware Script Tools Archive**.
-
-This repository is a curated collection of scripting utilities and tools maintained by the EliteSoftware team. It is designed to enhance productivity, automate mundane tasks, and streamline development workflows across multiple environments.
-
-Whether you need to automate a deployment, manage Windows registry keys, or process complex data sets, this archive serves as the central hub for our internal dev-tools.
-
----
-
-## **✨ Available Tools**
-
-The archive allows for a rich, multi-language experience. Here is what is under the hood:
-
-### **🐍 Python Scripts**
-Automation utilities for common development tasks.
-* **Data Processing:** Advanced transformation tools for large datasets.
-* **Config Management:** Scripts to handle environment configurations.
-* **Monitoring:** Logging utilities to keep track of system health.
-
-### **🐚 Bash Scripts**
-For the Linux/Unix power users.
-* **System Admin:** Helpers for daily administrative tasks.
-* **Deployment:** Automation scripts for CI/CD pipelines.
-* **Build Tools:** Utilities to manage releases and file processing.
-
-### **📦 Node.js Tools**
-Modern JavaScript utilities.
-* **CLI Apps:** Command-line interfaces for specific workflows.
-* **Bundling:** Build and bundling utilities.
-* **Asset Management:** Tools to handle static assets and dev server enhancements.
-
-### **⚡ PowerShell Scripts**
-Windows ecosystem management.
-* **System Automation:** Deep Windows system integration.
-* **Registry Tools:** Configuration and registry manipulation.
-* **Batch Operations:** Process management utilities.
-
 <details>
 <summary><b>📚 Project Documentation Index</b></summary>
 <br>
@@ -174,6 +137,43 @@ Windows ecosystem management.
 </details>
 
 ---
+Welcome to the **EliteSoftware Script Tools Archive**.
+
+This repository is a curated collection of scripting utilities and tools maintained by the EliteSoftware team. It is designed to enhance productivity, automate mundane tasks, and streamline development workflows across multiple environments.
+
+Whether you need to automate a deployment, manage Windows registry keys, or process complex data sets, this archive serves as the central hub for our internal dev-tools.
+
+---
+
+## **✨ Available Tools**
+
+The archive allows for a rich, multi-language experience. Here is what is under the hood:
+
+### **🐍 Python Scripts**
+Automation utilities for common development tasks.
+* **Data Processing:** Advanced transformation tools for large datasets.
+* **Config Management:** Scripts to handle environment configurations.
+* **Monitoring:** Logging utilities to keep track of system health.
+
+### **🐚 Bash Scripts**
+For the Linux/Unix power users.
+* **System Admin:** Helpers for daily administrative tasks.
+* **Deployment:** Automation scripts for CI/CD pipelines.
+* **Build Tools:** Utilities to manage releases and file processing.
+
+### **📦 Node.js Tools**
+Modern JavaScript utilities.
+* **CLI Apps:** Command-line interfaces for specific workflows.
+* **Bundling:** Build and bundling utilities.
+* **Asset Management:** Tools to handle static assets and dev server enhancements.
+
+### **⚡ PowerShell Scripts**
+Windows ecosystem management.
+* **System Automation:** Deep Windows system integration.
+* **Registry Tools:** Configuration and registry manipulation.
+* **Batch Operations:** Process management utilities.
+
+
 
 ## **🛠️ Getting Started**
 
