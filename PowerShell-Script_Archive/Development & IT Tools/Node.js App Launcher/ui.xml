@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Node.js App Launcher UI Template v1.5.0.0 - Created by: Zachary Whiteman & Google Gemini Ai.
+    Date: 8/20/2025 - 11:05 AM
+    This version adds the 'autosize' attribute to the header label to ensure it renders correctly.
+-->
+<projects>
+    <project name="NodeJsAppLauncher">
+        <form title="Node.js App Launcher" width="450" height="430">
+            
+            <control type="Panel" name="headerPanel" x="0" y="0" width="450" height="50" backColor="SteelBlue" />
+            <!-- The 'autosize' attribute is added here to fix the title rendering issue. -->
+            <control type="Label" name="headerLabel" text="Node.js App Launcher" x="10" y="10" font="Segoe UI, 16, Bold" foreColor="White" backColor="SteelBlue" autosize="true" />
+
+            <control type="Label" name="statusIndicator" text="■" x="15" y="60" width="20" height="20" font="Segoe UI, 16" foreColor="Red" />
+            
+            <control type="ProgressBar" name="progressBar" x="45" y="63" width="375" height="15" style="Marquee" visible="false" />
+
+            <control type="TextBox" name="outputBox" x="15" y="85" width="405" height="180" multiline="true" readonly="true" backColor="Black" foreColor="White" font="Consolas, 8" />
+
+            <control type="Button" name="btnInstall" text="Run npm install" x="15" y="275" width="125" height="35" />
+            <control type="Button" name="btnRunDev" text="Run npm run dev" x="150" y="275" width="125" height="35" />
+            <control type="Button" name="btnClose" text="Close" x="285" y="275" width="135" height="35" />
+
+            <control type="Button" name="btnStop" text="Stop Server" x="15" y="315" width="197" height="35" enabled="false" />
+            <control type="Button" name="btnBrowser" text="Open Browser" x="222" y="315" width="198" height="35" enabled="false" />
+
+            <control type="Button" name="btnEnv" text="Setup .env" x="15" y="355" width="405" height="35" />
+        </form>
+    </project>
+
+</projects>
