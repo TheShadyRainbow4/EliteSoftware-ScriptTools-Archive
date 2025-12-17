@@ -12,97 +12,76 @@
 <!-- ABOUT THE PROJECT -->
 
 # 💾 About The Project <div align="center">
-## Screenshot may be slightly outdated. Sorry in advance! :)  
-<br />
-<div align="center">
-<!-- <a href="Screenshot"> -->
-<!-- <img src="https://i.postimg.cc/Y9QyWx7m/image.png" alt="GUI Screenshot" width="1280" height="720"> -->
-<!-- </a> -->
-</div>
 
-## Dev-Deploy Environment Manager v0.4
+## Dev-Deploy Environment Manager
 
-Dev-Deploy Environment Manager is a comprehensive PowerShell GUI utility, crafted with WPF/XAML, designed to streamline the setup and management of Python and .NET development environments. It provides an intuitive interface for discovering installed software, searching for available versions via `winget`, and facilitating installations (including `pip` package management for Python). Version 0.4 introduces robust UI theming, efficient background operations, and reliable parsing of `winget` results.
+**Note:** This file (`Untitled (2).PS1`) is the **Dev-Deploy Environment Manager** (v0.5).
 
-Built by: Zachary Whiteman & Google Gemini
+`Dev-Deploy` is a comprehensive utility for discovering, installing, and managing Python and .NET development environments on Windows. It provides a clean, tabbed graphical user interface (GUI) to simplify the setup and maintenance of your coding tools.
+
+Built by: Zachary Whiteman & Google Gemini Ai.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
 # 🔰 Getting Started
-This application is a single PowerShell script designed to simplify your development environment setup.
+This tool helps you manage your programming runtimes and SDKs.
 
 ## 🕰️ Prerequisites
 To run this script, you will need:
 
-*   **Windows Operating System:** (Windows 7 or later).
-*   **PowerShell 5.1 or newer:** (PowerShell Core is supported).
-*   **Required .NET Assemblies:** `PresentationFramework`, `PresentationCore`, `WindowsBase`, `System.Windows.Forms`, `System.Drawing` (included with modern Windows installations).
-*   **`winget`:** The Windows Package Manager (`winget`) must be installed and accessible in your system's PATH.
-*   **Python:** While the tool helps manage Python, some `pip` functionalities assume Python is generally available for selected installations.
+*   **Windows Operating System.**
+*   **PowerShell 5.1 or newer.**
+*   **.NET Framework:** Required for the Windows Forms/WPF GUI.
+*   **Winget:** The Windows Package Manager is used for searching and installing new versions of Python and .NET.
 
 ## 💽 Installation & Execution
-1.  **Download:** Download the `DevDeploy Envirnment Manager.PS1` script file.
+1.  **Download:** Download the script file.
 2.  **Unblock:** Right-click the file, go to Properties, and click `Unblock` if the file was downloaded from the internet.
-3.  **Run:** Execute the script from a PowerShell console or by double-clicking it.
+3.  **Run:** Execute the script from a PowerShell console.
     ```powershell
-    .\DevDeploy Envirnment Manager.PS1
+    ."\Untitled (2).PS1"
     ```
-    The PowerShell console window will automatically minimize upon launch for a cleaner GUI experience.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚀 Usage
-The application features a tabbed interface for managing different development environments:
+## 🚀 Features
 
-*   **Python Environment Tab:**
-    *   **"Refresh All"**: Scans for installed Python versions and lists available ones via `winget`.
-    *   **"Installed Python Versions"**: Displays detected Python installations.
-    *   **"Available via Winget"**: Shows Python versions available for installation. Select an item and click "Install Selected Python Version".
-    *   **"Manage Packages (pip) for Selected Installation"**: After selecting an installed Python version, enter a package name and click "Install Package" to install it via `pip`.
-*   **.NET Environment Tab:**
-    *   **"Refresh All"**: Scans for installed .NET SDKs/Runtimes and lists available ones via `winget`.
-    *   **"Installed .NET SDKs & Runtimes"**: Displays detected .NET installations.
-    *   **"Available via Winget"**: Shows .NET versions available for installation. Select an item and click "Install Selected .NET Version".
-*   **Activity Log Tab:** Provides a real-time log of all actions performed by the application, including `winget` searches and installation outputs.
+### Python Environment Management
+*   **Discovery:** Automatically finds installed Python versions using multiple methods:
+    *   Querying the Python Launcher (`py.exe`).
+    *   Scanning the system `PATH`.
+    *   Checking common installation directories.
+    *   Cross-referencing with `winget` to enable uninstallation.
+*   **Installation:** Search for and install new Python versions directly from `winget`.
+*   **Package Management:** Manage `pip` packages for any selected Python installation:
+    *   List installed packages.
+    *   Install new packages by name.
+    *   Uninstall existing packages.
+*   **Terminal Launch:** Quickly open a command prompt environment configured for a specific Python version.
 
-All `winget` searches and installations are performed in the background, ensuring the GUI remains responsive.
+### .NET Environment Management
+*   **Discovery:** Lists all installed .NET SDKs and Runtimes by parsing the output of the `dotnet` CLI.
+*   **Installation:** Search for and install .NET SDKs and Runtimes via `winget`.
+*   **Uninstallation:** Remove specific .NET components.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## ✨ Key Features
-*   **GUI-based Environment Management:** Intuitive WPF/XAML graphical user interface for easy interaction.
-*   **Python Environment Control:** Discover installed Python versions, search for new ones via `winget`, and install Python packages using `pip`.
-*   **.NET Environment Control:** Discover installed .NET SDKs/Runtimes, and install new versions via `winget`.
-*   **Asynchronous Operations:** `winget` searches and installations run as background PowerShell jobs, preventing UI freezes.
-*   **Robust `winget` Parsing:** Utilizes regular expressions to reliably extract and display information from `winget` search results.
-*   **Modern UI Theming:** Implements P/Invoke methods to ensure the GUI uses native Windows visual styles for a polished look.
-*   **Integrated Activity Log:** Provides real-time feedback and detailed logs of all operations directly within the application.
-*   **Console Minimization:** Automatically minimizes the PowerShell console window on startup, providing a cleaner, application-like experience.
+### General Features
+*   **Activity Log:** A dedicated tab tracks all actions, command outputs, and errors for troubleshooting.
+*   **Background Jobs:** Long-running tasks (like installations) run in the background to keep the UI responsive.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🛠️ Technology Stack
-The application is a self-contained PowerShell script, leveraging:
-
 *   **Scripting Language:** PowerShell
-*   **GUI Framework:** WPF (Windows Presentation Foundation) using XAML for rich graphical user interfaces.
-*   **Package Management:** `winget` (Windows Package Manager) for system-level software discovery and installation.
-*   **Python Package Management:** `pip` for installing Python libraries.
-*   **Operating System Integration:** P/Invoke (Platform Invoke) for direct calls to Windows API functions for advanced UI control and theming.
-*   **Concurrency:** PowerShell Jobs (`Start-Job`) for non-blocking background operations.
+*   **GUI Framework:** WPF (Windows Presentation Foundation) via XAML.
+*   **Backend Tools:** `winget`, `dotnet`, `py.exe`, `pip`.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📐 Architecture & Security Notes
-Dev-Deploy Environment Manager operates by orchestrating local system commands and services.
-
-*   **Local Execution:** All operations are performed locally on your machine. No external network services are directly accessed by the script itself beyond what `winget` or `pip` might do to fetch packages.
-*   **Dependency on `winget` and Python:** Relies on the proper functioning and security of `winget` for package installations and Python for environment management.
-*   **Administrator Privileges (for winget/pip):** While the script attempts to minimize the console, `winget` and `pip` commands often require elevated privileges for system-wide installations or modifications.
-*   **P/Invoke for UI:** Uses P/Invoke for direct Windows API calls for UI rendering, which is a standard and secure practice for custom UI in PowerShell.
-*   **No Telemetry:** The application does not collect or transmit any user data or telemetry.
+*   **Privileges:** Installing or uninstalling software typically requires Administrator privileges. While the script doesn't force a UAC prompt on launch, operations may fail or prompt for elevation if you are not running as Admin.
+*   **Winget Integration:** The script acts as a wrapper around `winget`. Ensure `winget` is correctly configured on your system.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
