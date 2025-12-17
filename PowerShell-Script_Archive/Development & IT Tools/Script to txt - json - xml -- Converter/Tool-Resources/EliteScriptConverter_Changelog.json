@@ -1,0 +1,102 @@
+[
+  {
+    "Version": "1.2.3.1",
+    "Date": "2025-12-16",
+    "Author": "Zachary Whiteman / EliteSoftware Company / Google Gemini",
+    "Changes": [
+      "Fixed alignment bug where the 'Done' button in the Changelog window was not centered."
+    ]
+  },
+  {
+    "Version": "1.2.3.0",
+    "Date": "2025-12-16",
+    "Author": "Zachary Whiteman / EliteSoftware Company / Google Gemini",
+    "Changes": [
+      "Increased main form banner size and adjusted layout for better visibility.",
+      "Replaced image banner in Changelog window with a clean, large text header.",
+      "Updated Changelog window footer to a lighter theme with a centered 'Done' button."
+    ]
+  },
+  {
+    "Version": "1.2.2.1",
+    "Date": "2025-12-16",
+    "Author": "Zachary Whiteman / EliteSoftware Company / Google Gemini",
+    "Changes": [
+      "Adjusted main form and changelog window banners to use 'Zoom' PictureBoxSizeMode.",
+      "Ensures banner images are scaled proportionally, centered, and not stretched or clipped."
+    ]
+  },
+  {
+    "Version": "1.2.2.0",
+    "Date": "2025-12-16",
+    "Author": "Zachary Whiteman / EliteSoftware Company / Google Gemini",
+    "Changes": [
+      "Replaced Markdown-to-HTML conversion with direct JSON-to-HTML generation for cleaner Changelog formatting.",
+      "Styled Changelog with modern CSS including cards, headers, and clean lists.",
+      "Fixed visual style of the 'Done' button in the Changelog window to match system theme."
+    ]
+  },
+  {
+    "Version": "1.2.1.1",
+    "Date": "2025-12-16",
+    "Author": "Zachary Whiteman / EliteSoftware Company / Google Gemini",
+    "Changes": [
+      "Fixed Changelog window banner to be centered and not stretched, improving visual quality."
+    ]
+  },
+  {
+    "Version": "1.2.1.0",
+    "Date": "2025-12-16",
+    "Author": "Zachary Whiteman / EliteSoftware Company / Google Gemini",
+    "Changes": [
+      "Enhanced Changelog GUI with HTML rendering for proper Markdown display.",
+      "Added Banner image to the top of the Changelog window.",
+      "Added a dark footer panel with a 'Done' button to the Changelog window."
+    ]
+  },
+  {
+    "Version": "1.2.0.0",
+    "Date": "2025-12-16",
+    "Author": "Zachary Whiteman / EliteSoftware Company / Google Gemini",
+    "Changes": [
+      "Added Import Scripts button to easily copy files to Source directory.",
+      "Added Clear Source and Clear Output buttons with safety confirmations.",
+      "Implemented Custom Changelog GUI window with Markdown-like formatting.",
+      "Fixed Banner image scaling (centered instead of stretched)."
+    ]
+  },
+  {
+    "Version": "1.1.0.0",
+    "Date": "2025-12-16",
+    "Author": "Zachary Whiteman / EliteSoftware Company / Google Gemini",
+    "Changes": [
+      "Added EliteSoftware Company Banner to top of UI.",
+      "Added EliteSoftware Logo to header area.",
+      "Adjusted UI layout to accommodate new branding elements.",
+      "Increased main window height."
+    ]
+  },
+  {
+    "Version": "1.0.1.0",
+    "Date": "2025-12-16",
+    "Author": "Zachary Whiteman / EliteSoftware Company / Google Gemini",
+    "Changes": [
+      "Moved Configuration folder to Tool-Resources directory.",
+      "Added Application Icon from Tool-Resources."
+    ]
+  },
+  {
+    "Version": "1.0.0.0",
+    "Date": "2025-12-16",
+    "Author": "Zachary Whiteman / EliteSoftware Company / Google Gemini",
+    "Changes": [
+      "Initial Release.",
+      "Implemented standard EliteSoftware Logging Module.",
+      "Implemented WinForms GUI with Dark Theme.",
+      "Added Source and Output directory selection.",
+      "Added support for converting .ps1 and .py files.",
+      "Added output formats: JSON, XML, TXT.",
+      "Included EliteSoftware branding and slogans."
+    ]
+  }
+]

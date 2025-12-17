@@ -1,0 +1,13 @@
+[
+  {
+    "version": "1.0.1.0",
+    "date": "14122025",
+    "changes": [
+      "Implemented enhanced logging system with file rotation.",
+      "Added DuckDuckGo favicon service as a fallback strategy.",
+      "Fixed settings persistence: 'Open Explorer' and 'Hide Console' states are now saved.",
+      "Improved error handling and robustness.",
+      "Created backup and changelog system."
+    ]
+  }
+]

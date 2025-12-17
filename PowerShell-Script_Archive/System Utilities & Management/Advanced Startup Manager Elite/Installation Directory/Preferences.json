@@ -1,0 +1,15 @@
+{
+  "Tasks": {
+    "Grouping": 1,
+    "Sorting": 0
+  },
+  "Startup": {
+    "Sorting": 0,
+    "Grouping": 1,
+    "View": "List"
+  },
+  "Services": {
+    "Grouping": 2,
+    "Sorting": 2
+  }
+}

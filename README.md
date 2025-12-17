@@ -42,19 +42,17 @@ A comprehensive collection of scripting utilities designed to streamline develop
 
 ### **Communication**
 * [OptiLink Instant Messenger](PowerShell-Script_Archive/Communication/OptiLink%20Instant%20Messenger/README.md)
-<<<<<<< HEAD
   * [v0.9.3.6 Documentation](PowerShell-Script_Archive/Communication/OptiLink%20Instant%20Messenger/Previous%20Versions/v0.9.3.6%20OptiLink%20Instant%20Messenger.md)
   * [v0.9.3.5 Documentation](PowerShell-Script_Archive/Communication/OptiLink%20Instant%20Messenger/Previous%20Versions/v0.9.3.5%20OptiLink%20Instant%20Messenger.md)
   * [v0.9.0.0 Documentation](PowerShell-Script_Archive/Communication/OptiLink%20Instant%20Messenger/Previous%20Versions/v0.9.0.0%20OptiLink%20Instant%20Messenger.md)
   * [v0.8.6.0 Documentation](PowerShell-Script_Archive/Communication/OptiLink%20Instant%20Messenger/Previous%20Versions/v0.8.6.0%20OptiLink%20Instant%20Messenger.md)
-=======
->>>>>>> ecf3d323b58cb9c5941fed29da335a1b0a04569b
 
 ### **Development & IT Tools**
 * [AI Setup Clean Install](PowerShell-Script_Archive/Development%20&%20IT%20Tools/AI%20Setup%20Clean%20Install/README.md)
 * [DevDeploy Environment Manager](PowerShell-Script_Archive/Development%20&%20IT%20Tools/DevDeploy%20Environment%20Manager/README.md)
 * [DotNet Environment Manager](PowerShell-Script_Archive/Development%20&%20IT%20Tools/DotNet%20Environment%20Manager/README.md)
 * [EliteSoftware Manager](PowerShell-Script_Archive/Development%20&%20IT%20Tools/EliteSoftware%20Manager/README.md)
+* [EliteScriptConverter](PowerShell-Script_Archive/Development%20&%20IT%20Tools/Script%20to%20txt%20-%20json%20-%20xml%20--%20Converter/README.md)
 * [Get Relative Path](PowerShell-Script_Archive/Development%20&%20IT%20Tools/Get%20Relative%20Path/README.md)
 * [Install Pyenv Win](PowerShell-Script_Archive/Development%20&%20IT%20Tools/Install%20Pyenv%20Win/README.md)
 * [Install Visual Studio Build Tools](PowerShell-Script_Archive/Development%20&%20IT%20Tools/Install%20Visual%20Studio%20Build%20Tools/README.md)
@@ -99,10 +97,7 @@ A comprehensive collection of scripting utilities designed to streamline develop
 * [Script Launcher](PowerShell-Script_Archive/Launcher%20&%20Automation/Script%20Launcher/README.md)
 
 ### **Miscellaneous**
-<<<<<<< HEAD
 * [Active Development Staging](PowerShell-Script_Archive/Miscellaneous/Active%20Development%20Staging/README.md)
-=======
->>>>>>> ecf3d323b58cb9c5941fed29da335a1b0a04569b
 * [Asset Manager](PowerShell-Script_Archive/Miscellaneous/Asset%20Manager/README.md)
 * [Backup Final Version](PowerShell-Script_Archive/Miscellaneous/Backup%20Final%20Version/README.md)
 * [Load COM Objects](PowerShell-Script_Archive/Miscellaneous/Load%20COM%20Objects/README.md)
@@ -119,6 +114,7 @@ A comprehensive collection of scripting utilities designed to streamline develop
 * [Network Manager](PowerShell-Script_Archive/Networking%20&%20Web%20Tools/Network%20Manager/README.md)
 
 ### **System Utilities & Management**
+* [Advanced Startup Manager Elite](PowerShell-Script_Archive/System%20Utilities%20&%20Management/Advanced%20Startup%20Manager%20Elite/README.md)
 * [Advanced StartupManager](PowerShell-Script_Archive/System%20Utilities%20&%20Management/Advanced%20StartupManager/README.md)
 * [AppMonitor](PowerShell-Script_Archive/System%20Utilities%20&%20Management/AppMonitor/README.md)
 * [Elite Utility Main](PowerShell-Script_Archive/System%20Utilities%20&%20Management/Elite%20Utility%20Main/README.md)

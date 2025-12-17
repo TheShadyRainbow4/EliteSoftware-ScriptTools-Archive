@@ -1,0 +1,9 @@
+{
+    "version": "0.0.1.2",
+    "changes": [
+        {
+            "date": "2025-12-14",
+            "description": "Implemented new approach for auto-launch countdown disappearance: instead of attempting to fully hide, the countdown display colors are changed to 'black on black' (invisible) as soon as an arrow key is pressed, ensuring it is no longer visually present upon user interaction."
+        }
+    ]
+}

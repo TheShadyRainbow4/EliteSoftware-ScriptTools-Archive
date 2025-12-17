@@ -1,0 +1,193 @@
+[
+    {
+        "version": "2.4.0.0",
+        "date": "2025-11-17",
+        "changes": [
+            "Theme: Implemented a new 'Glossy Button' style for all buttons to align with the Vista/Aero aesthetic."
+        ]
+    },
+    {
+        "version": "2.3.9.8",
+        "date": "2025-11-17",
+        "changes": [
+            "Fix: Enabled grouping functionality in the Icon view for Startup Apps by replacing the WrapPanel with a standard vertical panel."
+        ]
+    },
+    {
+        "version": "2.3.9.7",
+        "date": "2025-11-17",
+        "changes": [
+            "Bugfix: Icon resolution logic was completely rewritten to prioritize the 'App Paths' registry key. This is a more precise and reliable method for locating executables and should definitively fix the icon loading issue."
+        ]
+    },
+    {
+        "version": "2.3.9.6",
+        "date": "2025-11-17",
+        "changes": [
+            "Bugfix: Implemented a definitive fix for icon loading by adding support for resolving executables via the system's PATH environment variable. This should make icons appear correctly for most startup items."
+        ]
+    },
+    {
+        "version": "2.3.9.5",
+        "date": "2025-11-17",
+        "changes": [
+            "Bugfix: Refactored backup logic to only export essential data, permanently fixing JSON serialization warnings and improving stability."
+        ]
+    },
+    {
+        "version": "2.3.9.4",
+        "date": "2025-11-17",
+        "changes": [
+            "Style: Centered the 'Okay' button on the Changelog viewer."
+        ]
+    },
+    {
+        "version": "2.3.9.3",
+        "date": "2025-11-17",
+        "changes": [
+            "Bugfix: Fixed a critical freeze/crash when opening the Backup & Restore window by properly defining data columns and increasing JSON serialization depth.",
+            "Diagnostics: Added comprehensive logging to a 'log.txt' file to help diagnose the icon loading issue."
+        ]
+    },
+    {
+        "version": "2.3.9.2",
+        "date": "2025-11-17",
+        "changes": [
+            "Bugfix: Implemented a robust P/Invoke method to correctly load application icons, fixing the highest priority issue.",
+            "UI: Improved Changelog viewer to wrap text and ensure scrollability.",
+            "UI: All dialog windows now correctly display the main application icon.",
+            "UI: Improved Backup/Restore window to show full path in tooltips and automatically display the content of the most recent backup."
+        ]
+    },
+    {
+        "version": "2.3.9.1",
+        "date": "2025-11-17",
+        "changes": [
+            "Style: Adjusted the vertical grid line color in all tables to be a more subtle shade of gray."
+        ]
+    },
+    {
+        "version": "2.3.9.0",
+        "date": "2025-11-17",
+        "changes": [
+            "Feature: Added right-click context menus to all lists (Startup, Tasks, Services) to provide quick access to actions like opening file/registry locations or management consoles."
+        ]
+    },
+    {
+        "version": "2.3.8.0",
+        "date": "2025-11-17",
+        "changes": [
+            "Feature: Added descriptive tooltips to most buttons, menus, and controls to improve usability."
+        ]
+    },
+    {
+        "version": "2.3.7.0",
+        "date": "2025-11-17",
+        "changes": [
+            "Feature: Grid lines in all tables have been styled to be lighter vertically than horizontally, improving readability."
+        ]
+    },
+    {
+        "version": "2.3.6.0",
+        "date": "2025-11-17",
+        "changes": [
+            "Feature: Significantly improved the icon parsing logic for the Startup Apps tab. The new logic is better at finding icons by resolving shortcuts, checking multiple file extensions, and handling more complex command paths."
+        ]
+    },
+    {
+        "version": "2.3.5.0",
+        "date": "2025-11-17",
+        "changes": [
+            "Feature: Improved theme compatibility by replacing hardcoded colors with dynamic system resources, allowing better integration with custom themes."
+        ]
+    },
+    {
+        "version": "2.3.4.0",
+        "date": "2025-11-17",
+        "changes": [
+            "Feature: The application version number is now displayed in the status bar."
+        ]
+    },
+    {
+        "version": "2.3.3.0",
+        "date": "2025-11-17",
+        "changes": [
+            "Feature: Improved icon loading logic. The application now uses a custom placeholder icon for startup items where an icon cannot be found, instead of a generic system icon."
+        ]
+    },
+    {
+        "version": "2.3.2.0",
+        "date": "2025-11-17",
+        "changes": [
+            "Feature: Added the foundational UI for the 'Backup & Restore' feature.",
+            "Users can now open the dialog from 'File > Backup & Restore...', view backup categories (Startup, Services, Tasks), see a list of available backup files, and view the contents of a selected backup."
+        ]
+    },
+    {
+        "version": "2.3.1.0",
+        "date": "2025-11-17",
+        "changes": [
+            "Feature: Added a changelog viewer, accessible from the 'Help > View Changelog' menu."
+        ]
+    },
+    {
+        "version": "2.3.0.0",
+        "date": "2025-11-17",
+        "changes": [
+            "Feature: Added a main menubar with 'File > Exit' and 'Help' placeholders."
+        ]
+    },
+    {
+        "version": "2.2.4.1",
+        "date": "2025-11-17",
+        "changes": [
+            "Bugfix: Corrected a typo in the Services tab's event handler that broke the 'Group by' functionality."
+        ]
+    },
+    {
+        "version": "2.2.4.0",
+        "date": "2025-11-17",
+        "changes": [
+            "Feature: Added 'Status'/'State' as a sorting option to the Services and Scheduled Tasks tabs.",
+            "Feature: The main window is now resizable."
+        ]
+    },
+    {
+        "version": "2.2.3.1",
+        "date": "2025-11-17",
+        "changes": [
+            "Bugfix: Corrected an error that prevented the custom application icon from loading.",
+            "Bugfix: The script now correctly relaunches with the same PowerShell version (e.g., pwsh.exe) it was started with when elevating to administrator privileges."
+        ]
+    },
+    {
+        "version": "2.2.3.0",
+        "date": "2025-11-17",
+        "changes": [
+            "Implemented automatic backup system.",
+            "On startup, the application now automatically backs up all startup items, scheduled tasks, and services to the 'Backups' directory with a timestamp."
+        ]
+    },
+    {
+        "version": "2.2.2.0",
+        "date": "2025-11-17",
+        "changes": [
+            "Implemented user preferences system.",
+            "UI settings (sorting, grouping, view) are now saved to 'Preferences.json' and loaded on startup."
+        ]
+    },
+    {
+        "version": "2.2.1.0",
+        "date": "2025-11-17",
+        "changes": [
+            "Added logic to load and set a custom application icon for the main window."
+        ]
+    },
+    {
+        "version": "2.2.0.1",
+        "date": "2025-11-17",
+        "changes": [
+            "Initialized the changelog."
+        ]
+    }
+]
