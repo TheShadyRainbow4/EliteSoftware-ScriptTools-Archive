@@ -1,0 +1,6 @@
+{"Severity":"INFO","Timestamp":"2025-12-17T08:39:52","Message":"Script started. Logging system initialized."}
+{"Severity":"INFO","Timestamp":"2025-12-17T08:39:53","Message":"System Ready."}
+{"Severity":"INFO","Timestamp":"2025-12-17T08:39:53","Message":"Archive Root: S:\\Projects\\EliteSoftware-ScriptTools-Archive\\PowerShell-Script_Archive"}
+{"Severity":"INFO","Timestamp":"2025-12-17T08:41:02","Message":"Processing: FileScanner_and_DuplicateFinder..."}
+{"Severity":"INFO","Timestamp":"2025-12-17T08:41:02","Message":"Icon Source: Custom Selection"}
+{"Severity":"INFO","Timestamp":"2025-12-17T08:41:03","Message":"SUCCESS: FileScanner_and_DuplicateFinder (v1.3.3.7)"}
