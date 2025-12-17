@@ -1,17 +1,5 @@
-
-
-<!-- EliteSoftware Co. LOGO -->
-
-
-
-<br />
 <div align="center">
-<a href="Logo">
-<img src="https://i.postimg.cc/85MDTcrJ/Elite-Software-LOGO-Mocup2.png" alt="Logo" width="256" height="256">
-</a>
-</div>
-
-
+<a href='https://i.postimg.cc/85mKDbX8/Elite-Software-Company-Logo.png' target='_blank'><img src='https://i.postimg.cc/85mKDbX8/Elite-Software-Company-Logo.png' border='0' alt='Elite-Software-LOGO' width="250"></a> </div>
 
 
 
@@ -172,7 +160,54 @@ Before using the EliteSoftware Script Tools, ensure you have the following insta
 
 ## **📂 Repository Structure**
 
+EliteSoftware-ScriptTools-Archive/ ├── Readme.md # This comprehensive documentation ├── scripts/ # Main scripts directory │ ├── python/ # Python-based utilities │ ├── bash/ # Bash shell scripts │ ├── nodejs/ # Node.js applications │ └── powershell/ # PowerShell scripts ├── docs/ # Detailed documentation ├── examples/ # Usage examples ├── tests/ # Test suite └── config/ # Configuration templates
+
+
+---
+
+## **📝 Usage Guidelines**
+
+To ensure stability and reliability, please adhere to the following best practices.
+
+### **Best Practices**
+* **Read Documentation:** Always review tool-specific documentation before use.
+* **Test First:** Run scripts in a development environment before production.
+* **Backup Data:** Ensure data backups exist before running automated tasks.
+* **Monitor Execution:** Keep logs of script execution for troubleshooting.
+* **Update Regularly:** Check for updates and security patches periodically.
+
+### **Error Handling & Config**
+* **Exit Codes:** Check `echo $?` (Unix) or `echo %errorlevel%` (Windows).
+* **Logs:** Review the `logs/` directory for detailed error info.
+* **Debug Mode:** Use `--debug` or `-v` flags for verbose output.
+* **Configuration:** Most scripts support arguments, env vars, and YAML/JSON config files.
+
+---
+
+## **🎨 Media Assets**
+
 <div align="center">
-<a href='https://i.postimg.cc/DZTjtNg1/Elite-Software-Company-Simulator-LOGO.png' target='_blank'><img src='https://i.postimg.cc/DZTjtNg1/Elite-Software-Company-Simulator-LOGO.png' border='0' alt='Elite-Software-Client' width="200"></a>
+<a href='https://i.postimg.cc/DZTjtNg1/Elite-Software-Company-Simulator-LOGO.png' target='_blank'><img src='https://i.postimg.cc/DZTjtNg1/Elite-Software-Company-Simulator-LOGO.png' border='0' alt='Elite-Software-Client' width="250"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href='https://i.postimg.cc/85mKDbX8/Elite-Software-Company-Logo.png' target='_blank'><img src='https://i.postimg.cc/85mKDbX8/Elite-Software-Company-Logo.png' border='0' alt='Elite-Software-LOGO' width="250"></a>
 </div>
 
+---
+
+## **📜 License**
+
+Distributed under the **MIT License**.
+
+> Permission is hereby granted, free of charge, to any person obtaining a copy of this software... to deal in the Software without restriction.
+> *See `LICENSE` file for full text.*
+
+---
+
+## **🙏 Support & Acknowledgments**
+
+**Maintained by:** EliteSoftware Team | Zachary Whiteman
+<br />
+**Last Updated:** 2025-12-17 07:24:26 (UTC)
+
+* Check the [FAQ](docs/FAQ.md)
+* Submit detailed bug reports in Issues.
