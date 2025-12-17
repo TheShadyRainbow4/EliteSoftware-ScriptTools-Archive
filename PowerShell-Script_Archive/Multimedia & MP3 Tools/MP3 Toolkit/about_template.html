@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EliteSoftware Co. Limited :: Official Corporate Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&family=Arial:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- Base & Layout --- */
+        * { 
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #001b38;
+            background-image: 
+                radial-gradient(ellipse at 50% 0%, rgba(57, 104, 165, 0.6) 0%, transparent 70%),
+                radial-gradient(ellipse at 50% 100%, rgba(0, 40, 90, 0.7) 0%, transparent 70%);
+            background-attachment: fixed;
+            color: #222;
+            font-size: 14px;
+        }
+
+        .app-wrapper {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: none;
+            min-height: 100vh;
+            margin: 0;
+            background: rgba(220, 225, 235, 0.95);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+            border-radius: 0;
+            overflow: hidden;
+            border: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main.content-area {
+            padding: 24px;
+            background-color: #f0f0f0;
+            border-top: 1px solid #a0a0a0;
+            flex-grow: 1;
+        }
+
+        .grid-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 992px) {
+            .grid-layout {
+                grid-template-columns: 1fr 320px;
+            }
+            .main-content { order: 1; }
+            .sidebar-content { order: 2; }
+        }
+
+        /* --- Header --- */
+        header {
+            background: linear-gradient(to bottom, rgba(245, 248, 253, 0.8), rgba(210, 220, 235, 0.7));
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+            padding: 0 24px;
+        }
+        .header-main {
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header-main .logo-title-group { display: flex; align-items: center; }
+        .header-main .logo-title-group svg { margin-right: 12px; }
+        .header-main h1 { font-size: 28px; font-weight: 700; color: #1e1e1e; text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8); }
+        .header-main p { font-size: 14px; color: #444; }
+        .header-main .site-info { text-align: right; font-size: 11px; color: #555; }
+        .header-top-bar { display: none; }
+
+        /* --- Navigation --- */
+        .nav-container-wrapper {
+             background: linear-gradient(to bottom, #d8e0ec, #c0c8d8);
+             border-top: 1px solid rgba(255, 255, 255, 0.8);
+        }
+        .nav-container {
+            padding: 4px 24px;
+            max-width: 1224px;
+            margin: 0 auto;
+        }
+        .nav-bar {
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap;
+        }
+        .nav-link {
+            font-weight: 700;
+            padding: 6px 16px;
+            user-select: none;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        .nav-link.active {
+            background: #f0f0f0;
+            color: #111;
+            border: 1px solid #a0a0a0;
+            border-bottom: 1px solid #f0f0f0;
+            margin-bottom: -1px;
+            box-shadow: 0 -1px 2px rgba(0,0,0,0.1);
+            text-shadow: none;
+        }
+        .nav-link.active:hover {
+            background: #f0f0f0;
+            border-color: #a0a0a0;
+        }
+
+        /* --- VISTA AERO "GEL" BUTTONS & HEADERS --- */
+        .vista-button, .section-header, .modal-title-bar, .sidebar-section > h3, .nav-link, .styled-table thead th {
+            position: relative;
+            overflow: hidden;
+            color: #fff;
+            text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
+            border: 1px solid rgba(0,0,0,0.6);
+            border-radius: 4px;
+            font-weight: 700;
+            background-size: 100% 200%;
+            background-position: 0 0;
+            transition: background-position 0.1s ease-in-out;
+        }
+        .vista-button:hover, .nav-link:hover {
+            background-position: 0 100%;
+        }
+        .vista-button::before, .section-header::before, .modal-title-bar::before, .sidebar-section > h3::before, .nav-link::before, .styled-table thead th::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+            border-radius: 4px 4px 20px 20px / 4px 4px 4px 4px;
+        }
+
+        .vista-button {
+            padding: 8px 16px;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+            cursor: pointer;
+        }
+        .vista-button:active {
+            transform: translateY(1px);
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.4);
+        }
+        .vista-button:active::before { opacity: 0.6; }
+
+        .vista-button.default, .nav-link { 
+            background-image: linear-gradient(to top, #6a7a91, #8d9bb0);
+            border-color: #505f74;
+            color: #fff;
+        }
+        .vista-button.primary {
+            background-image: linear-gradient(to top, #2a7abc, #52a8ee);
+            border-color: #1c5280;
+        }
+        .vista-button.delete {
+            background-image: linear-gradient(to top, #a93737, #d95757);
+            border-color: #8b2525;
+        }
+
+        /* --- Section Headers & Content --- */
+        .section-header {
+            padding: 6px 12px;
+            margin-bottom: 12px;
+            font-size: 18px;
+            background-image: linear-gradient(to top, #2a7abc, #52a8ee);
+            border-color: #1c5280;
+        }
+        .page-content { display: none; }
+        .page-content.active { display: block; animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .content-text p { margin-bottom: 1em; line-height: 1.6; }
+        .content-text h3 { font-size: 18px; font-weight: 700; margin: 1.5em 0 0.5em; color: #1e3c72; }
+        .info-box { display: flex; align-items: center; gap: 12px; padding: 12px; border: 1px solid #c5c5c5; background-color: #e8e8e8; border-radius: 4px; margin: 16px 0; }
+        .info-box svg { flex-shrink: 0; }
+        .info-box h3 { font-size: 16px; margin: 0 0 4px; }
+        .service-item, .project-item, .blog-article {
+            padding: 12px; border: 1px solid #d0d0d0; background-color: #f9f9f9; border-radius: 4px;
+        }
+        .service-item h4, .project-item h4, .blog-article h3 { font-weight: 700; color: #1e3c72; font-size: 16px; margin: 0 0 8px; }
+        .blog-article .meta { font-size: 12px; color: #666; margin-bottom: 8px; }
+        .read-more { font-size: 14px; font-weight: 700; text-decoration: none; color: #2a7abc; cursor: pointer; }
+        .text-center { text-align: center; }
+        .space-y > * + * { margin-top: 12px; }
+
+        /* --- Table --- */
+        .table-container { border: 1px solid #999; border-radius: 4px; overflow-x: auto; box-shadow: 0 1px 2px rgba(0,0,0,0.2); margin-bottom: 12px; }
+        .styled-table { width: 100%; border-collapse: collapse; }
+        .styled-table td { padding: 8px 10px; border-bottom: 1px solid #ddd; }
+        .styled-table th { padding: 10px; text-align: left; }
+        .styled-table thead th {
+            background-image: linear-gradient(to top, #6a7a91, #8d9bb0);
+            border-color: #505f74;
+            border-bottom: 1px solid #505f74;
+        }
+        .styled-table tbody tr:nth-child(even) { background-color: #f7f7f7; }
+        .styled-table tbody tr:hover { background-color: #eaf2fa; }
+        .delete-btn { color: #c00; font-weight: 700; cursor: pointer; background: none; border: none; font-size: inherit; text-decoration: none; }
+        .delete-btn:hover { text-decoration: underline; }
+
+        /* --- Forms --- */
+        .form-input-group label { display: block; margin-bottom: 4px; font-weight: 700; }
+        .form-input, .form-textarea {
+            width: 100%; padding: 6px 8px; border: 1px solid #ababab; border-radius: 3px; background-color: #fff;
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.12); outline: none; transition: all 0.2s;
+        }
+        .form-input:focus, .form-textarea:focus {
+            border-color: #0078d7; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1), 0 0 0 2px rgba(0, 120, 215, 0.3);
+        }
+        .form-container { background-color: #e8e8e8; padding: 16px; border: 1px solid #c5c5c5; border-radius: 4px; }
+        .form-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+        @media (min-width: 640px) { .form-grid { grid-template-columns: 1fr 1fr; } }
+        .form-grid .full-width { grid-column: 1 / -1; }
+        .form-actions { display: flex; justify-content: flex-end; gap: 8px; padding-top: 16px; }
+
+        /* --- Sidebar --- */
+        .sidebar-container { display: flex; flex-direction: column; gap: 16px; }
+        .sidebar-section {
+            border: 1px solid #999; border-radius: 4px; overflow: hidden; background-color: #f9f9f9; box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+        .sidebar-section h3 { padding: 8px; font-size: 14px; border-radius: 3px 3px 0 0; border-bottom: 1px solid rgba(0,0,0,0.4);
+            background-image: linear-gradient(to top, #6a7a91, #8d9bb0);
+            border-color: #505f74;
+        }
+        .sidebar-section .sidebar-content-inner { padding: 12px; font-size: 14px; }
+        .sidebar-section ul { list-style-position: inside; }
+        .sidebar-section ul.list-disc { padding-left: 4px; }
+        .sidebar-image { margin: 8px 0; width: 100%; height: auto; border-radius: 3px; }
+
+        /* --- Footer --- */
+        .main-footer {
+            text-align: center; font-size: 12px; color: #ddd; padding: 12px 24px;
+            background: linear-gradient(to bottom, #8d9bb0, #6a7a91);
+            text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+        }
+
+        /* --- Modal --- */
+        .modal-overlay {
+            position: fixed; inset: 0; background-color: rgba(0,0,0,0.5); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+            display: none; align-items: center; justify-content: center; z-index: 1000; animation: fadeIn 0.2s ease;
+        }
+        .modal-overlay.visible { display: flex; }
+        .modal-content {
+            background: #f0f0f0; border-radius: 8px; width: 90%; max-width: 500px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.3);
+            animation: slideIn 0.3s ease-out;
+        }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+        .modal-title-bar {
+            padding: 8px 12px; border-bottom: 1px solid #a0a0a0; border-radius: 8px 8px 0 0;
+            background-image: linear-gradient(to top, #2a7abc, #52a8ee);
+            border-color: #1c5280;
+        }
+        .modal-body { padding: 20px; }
+        .modal-text { margin-bottom: 16px; }
+    </style>
+</head>
+<body>
+    <div class="app-wrapper">
+        <div id="main-container" class="main-container">
+            <!-- Header -->
+            <header>
+                <div class="header-main">
+                    <div class="logo-title-group">
+                        <svg width="60" height="60" viewBox="0 0 100 100">
+                            <defs>
+                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00AADD;stop-opacity:1"></stop>
+                                    <stop offset="100%" style="stop-color:#3A6EA5;stop-opacity:1"></stop>
+                                </linearGradient>
+                                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#999999;stop-opacity:1"></stop>
+                                    <stop offset="100%" style="stop-color:#666666;stop-opacity:1"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path d="M80,20 L60,20 L60,30 L70,30 L70,45 L60,45 L60,55 L70,55 L70,70 L60,70 L60,80 L80,80 L80,70 L90,70 L90,60 L80,60 L80,50 L90,50 L90,40 L80,40 L80,20 Z" fill="url(#grad1)"></path>
+                            <path d="M50,30 L20,30 L20,40 L40,40 L40,45 L20,45 L20,55 L40,55 L40,60 L20,60 L20,70 L50,70 L50,60 L30,60 L30,55 L50,55 L50,45 L30,45 L30,40 L50,40 L50,30 Z" fill="url(#grad2)"></path>
+                        </svg>
+                        <div>
+                            <h1>EliteSoftware Co. Limited</h1>
+                            <p>Championing an Information-First Approach to Software</p>
+                        </div>
+                    </div>
+                    <div class="site-info">
+                        <p>Site Version: 4.2.0.1</p>
+                        <p>Last Updated: 18-Aug-2025</p>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Navigation Bar -->
+            <div class="nav-container-wrapper">
+                <div class="nav-container">
+                    <nav class="nav-bar">
+                        <button data-page="home" class="nav-link">Home</button>
+                        <button data-page="about" class="nav-link">About Us</button>
+                        <button data-page="services" class="nav-link">Services</button>
+                        <button data-page="projects" class="nav-link">Projects</button>
+                        <button data-page="blog" class="nav-link">Blog</button>
+                        <button data-page="network" class="nav-link">Network Log</button>
+                        <button data-page="contact" class="nav-link">Contact</button>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <main class="content-area">
+                <div class="grid-container">
+                    <div class="grid-layout">
+                        <div class="main-content">
+                            <!-- Home Page -->
+                            <section id="home" class="page-content">
+                                <h2 class="section-header">Welcome to Our Corporate Headquarters</h2>
+                                <div class="content-text">
+                                    <p>Welcome to the official corporate website for EliteSoftware Co. Limited. Founded by Zachary Whiteman, we are at the forefront of developing enterprise-grade software solutions with a philosophy rooted in function over form. Our core competency lies in legacy system modernization, bespoke application development, and robust system management utilities.</p>
+                                    <div class="info-box">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#3A6EA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="9 12 12 15 15 9"></polyline>
+                                        </svg>
+                                        <div>
+                                            <h3>Our Mission</h3>
+                                            <p>To engineer and deploy highly efficient, reliable, and secure software systems that empower power-users and form the backbone of modern business operations, all while honoring the robust architecture of classic software.</p>
+                                        </div>
+                                    </div>
+                                    <p>Please use the navigation bar above to explore our completed projects, learn more about our company's history and founder, or get in touch with our development team.</p>
+                                </div>
+                            </section>
+
+                            <!-- About Us Page -->
+                            <section id="about" class="page-content">
+                                <h2 class="section-header">About EliteSoftware and Our Founder</h2>
+                                <div class="content-text">
+                                  <h3>Company History</h3>
+                                  <p>EliteSoftware Co. Limited was founded by Zachary Whiteman, a lifelong technology enthusiast with a deep appreciation for the robust architecture of classic software. Disenchanted with modern UI trends that often prioritize form over function, Zach established EliteSoftware to champion an "information-first" approach, creating tools that are powerful, customizable, and deeply functional.</p>
+                                  <h3>Meet the Founder: Zachary Whiteman</h3>
+                                  <p>Zach's journey into technology began by salvaging and repairing old computer towers with his grandpa. This hands-on experience instilled a deep understanding of hardware and software from the ground up. This passion for "tinkering" and understanding the "mechanics underneath" is the driving force behind EliteSoftware, influencing everything from system management utilities to deep-level Windows customizations. He believes in creating a cohesive vision for technology, unlocking its full potential through thoughtful integration and modification.</p>
+                                </div>
+                            </section>
+
+                            <!-- Services Page -->
+                            <section id="services" class="page-content">
+                                <h2 class="section-header">Our Services</h2>
+                                <div class="content-text space-y">
+                                  <p>We offer a comprehensive suite of software engineering and system management services designed to meet the diverse needs of modern enterprises and power-users.</p>
+                                  <div class="service-item"><h4>PowerShell & AutoHotkey Automation</h4><p>We build custom scripts and utilities to automate complex workflows, manage system configurations, and improve productivity on the Windows platform.</p></div>
+                                  <div class="service-item"><h4>.NET / C# Custom Development</h4><p>From standalone GUI applications to system-level utilities, we develop bespoke software solutions using the .NET Framework, focusing on stability and performance.</p></div>
+                                  <div class="service-item"><h4>Legacy System Integration & Modernization</h4><p>Breathe new life into your outdated systems. We specialize in creating middleware and integration solutions that allow legacy software to interface with modern platforms.</p></div>
+                                  <div class="service-item"><h4>Advanced Windows Customization</h4><p>Leveraging tools like Windhawk and the Win32 API, we develop custom solutions to modify and enhance the Windows user experience, restoring legacy features and creating unique aesthetics.</p></div>
+                                </div>
+                            </section>
+
+                            <!-- Projects Page -->
+                            <section id="projects" class="page-content">
+                                <h2 class="section-header">Project Portfolio</h2>
+                                <div class="content-text space-y">
+                                  <p>We have successfully developed a wide range of utilities and mods. Below is a summary of our key initiatives.</p>
+                                  <div class="project-item"><h4>Project: Aerexplorer - WindHawk Mod</h4><p>A comprehensive mod for the Windhawk platform that restores elements and aesthetics of the Windows Vista/7 "Aero" user interface to modern Windows Explorer. It achieves this through runtime hooking of system DLLs like ExplorerFrame.dll and shell32.dll.</p></div>
+                                  <div class="project-item"><h4>Project: Custom MMC Console Utility</h4><p>An advanced PowerShell script featuring a full graphical user interface (GUI) for building custom Microsoft Management Console (.msc) files. It automates the process of adding snap-ins, creating folder structures, and configuring console properties.</p></div>
+                                  <div class="project-item"><h4>Project: Resource Redirect Theming Engine</h4><p>A powerful theming solution built as a Windhawk mod that allows for on-the-fly redirection of system resources. It enables deep customization of icons, cursors, and UI elements without modifying original system files, configured via a simple .ini file.</p></div>
+                                </div>
+                            </section>
+                            
+                            <!-- Blog Page -->
+                            <section id="blog" class="page-content">
+                               <h2 class="section-header">The EliteSoftware Engineering Blog</h2>
+                               <div class="content-text space-y">
+                                   <article class="blog-article">
+                                      <h3>Deep Dive: The Art of UI Modding with WindHawk</h3>
+                                      <p class="meta">Posted on: 15-Aug-2025 by Zachary Whiteman</p>
+                                      <p>Windhawk provides a powerful, modular framework for altering the Windows UI without permanent system file modification. We explore the techniques of hooking into system libraries like shell32.dll to redirect resources, alter UI element behavior, and re-implement legacy aesthetics like Aero Glass...</p>
+                                      <a class="read-more">Read More &raquo;</a>
+                                   </article>
+                                   <article class="blog-article">
+                                      <h3>Automating System Management with PowerShell GUIs</h3>
+                                      <p class="meta">Posted on: 12-Aug-2025 by The Development Team</p>
+                                      <p>PowerShell is more than a command-line tool. We discuss the process of building robust GUI applications with PowerShell to automate complex tasks, such as programmatically constructing and exporting custom MMC console files for streamlined server management...</p>
+                                      <a class="read-more">Read More &raquo;</a>
+                                   </article>
+                                   <article class="blog-article">
+                                      <h3>Intro to AutoHotkey: Beyond Simple Macros</h3>
+                                      <p class="meta">Posted on: 10-Aug-2025 by Zachary Whiteman</p>
+                                      <p>AutoHotkey is an essential tool for any power user. This post covers the basics of creating custom hotkeys and text expansion, and brainstorms more advanced use-cases like application launchers, clipboard managers, and simple system utilities...</p>
+                                      <a class="read-more">Read More &raquo;</a>
+                                   </article>
+                               </div>
+                            </section>
+
+                            <!-- Network Log Page -->
+                            <section id="network" class="page-content">
+                                <h2 class="section-header">Internal Network Host Registry</h2>
+                                <div class="content-text">
+                                    <p>This registry is for logging and tracking all devices on the EliteSoftware internal network. Please keep this information up to date.</p>
+                                    <div class="table-container">
+                                        <table class="styled-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Hostname</th>
+                                                    <th>IP Address</th>
+                                                    <th>MAC Address</th>
+                                                    <th>Notes</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="network-table-body">
+                                                <!-- JS will populate this -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <button id="add-host-btn" class="vista-button primary">Add New Host</button>
+                                </div>
+                            </section>
+
+                            <!-- Contact Page -->
+                            <section id="contact" class="page-content">
+                                <h2 class="section-header">Contact Information</h2>
+                                <div class="content-text">
+                                    <p>For project inquiries or technical support, please use the form below. We typically respond within 24-48 business hours.</p>
+                                    <form id="contact-form" class="form-container">
+                                        <div class="form-grid">
+                                            <div class="form-input-group">
+                                                <label for="name">Your Name:</label>
+                                                <input type="text" id="name" name="name" class="form-input" required>
+                                            </div>
+                                            <div class="form-input-group">
+                                                <label for="email">Your Email:</label>
+                                                <input type="email" id="email" name="email" class="form-input" required>
+                                            </div>
+                                            <div class="form-input-group full-width">
+                                                <label for="subject">Subject:</label>
+                                                <input type="text" id="subject" name="subject" class="form-input" required>
+                                            </div>
+                                            <div class="form-input-group full-width">
+                                                <label for="message">Message:</label>
+                                                <textarea id="message" name="message" rows="8" class="form-textarea" required></textarea>
+                                            </div>
+                                            <div class="form-actions full-width">
+                                                <button type="submit" class="vista-button primary">Submit Inquiry</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </section>
+                        </div>
+
+                        <!-- Sidebar Column -->
+                        <aside class="sidebar-content">
+                             <div class="sidebar-container">
+                                 <div class="sidebar-section">
+                                     <h3>Latest News</h3>
+                                     <div class="sidebar-content-inner">
+                                         <ul class="space-y">
+                                             <li><strong>Aug 18, 2025:</strong> A new guide on using the Resource Redirect mod has been posted to the blog.</li>
+                                             <li><strong>Aug 15, 2025:</strong> Aerexplorer v1.8.1 released with improved stability for the latest Windows builds.</li>
+                                             <li><strong>Aug 10, 2025:</strong> Development begins on a new PowerShell utility for MMC creation.</li>
+                                         </ul>
+                                     </div>
+                                 </div>
+                                 <div class="sidebar-section">
+                                    <h3>My Home Lab</h3>
+                                    <div class="sidebar-content-inner">
+                                        <img src="https://storage.googleapis.com/gemini-prod/images/4.jpeg" alt="A home lab computer setup with multiple monitors displaying network diagrams." class="sidebar-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Home+Lab';">
+                                        <p>A look at the command center where our software and utilities are developed and tested.</p>
+                                    </div>
+                                 </div>
+                                 <div class="sidebar-section">
+                                     <h3>Core Technologies</h3>
+                                     <div class="sidebar-content-inner">
+                                         <ul class="list-disc">
+                                             <li>PowerShell Scripting & Automation</li>
+                                             <li>.NET Framework / C#</li>
+                                             <li>Windows System Internals (Win32 API)</li>
+                                             <li>AutoHotkey Scripting</li>
+                                             <li>IIS Server Management</li>
+                                             <li>Legacy System Integration</li>
+                                             <li>Advanced Windows Customization</li>
+                                         </ul>
+                                     </div>
+                                 </div>
+                             </div>
+                        </aside>
+                    </div>
+                </div>
+            </main>
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+                <p>Copyright &copy; 2024-2025 EliteSoftware Co. Limited. All Rights Reserved.</p>
+                <p>Created by: Zachary Whiteman & Google Gemini</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modals (Add/Edit Host, Confirm Delete, Custom Alert) -->
+    <div id="host-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-title-bar" id="modal-title">Add New Network Host</div>
+            <div class="modal-body">
+                <form id="host-form" class="space-y">
+                    <div class="form-input-group">
+                        <label for="hostname">Hostname:</label>
+                        <input type="text" id="hostname" name="hostname" class="form-input" required>
+                    </div>
+                    <div class="form-input-group">
+                        <label for="ip_address">IP Address:</label>
+                        <input type="text" id="ip_address" name="ip_address" class="form-input" required>
+                    </div>
+                    <div class="form-input-group">
+                        <label for="mac_address">MAC Address:</label>
+                        <input type="text" id="mac_address" name="mac_address" class="form-input">
+                    </div>
+                    <div class="form-input-group">
+                        <label for="notes">Notes:</label>
+                        <input type="text" id="notes" name="notes" class="form-input">
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" id="cancel-host-btn" class="vista-button delete">Cancel</button>
+                        <button type="submit" class="vista-button primary">Save Host</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirm-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-title-bar">Confirm Deletion</div>
+            <div class="modal-body">
+                <p id="confirm-message" class="modal-text">Are you sure you want to delete this host?</p>
+                <div class="form-actions">
+                    <button type="button" id="cancel-delete-btn" class="vista-button default">Cancel</button>
+                    <button type="button" id="confirm-delete-btn" class="vista-button delete">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="alert-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-title-bar">Notification</div>
+            <div class="modal-body">
+                <p id="alert-message" class="modal-text">Thank you for your inquiry!</p>
+                <div class="form-actions">
+                    <button type="button" id="alert-ok-btn" class="vista-button primary">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- UI Element References ---
+            const ui = {
+                navLinks: document.querySelectorAll('.nav-link'),
+                pages: document.querySelectorAll('.page-content'),
+                tableBody: document.getElementById('network-table-body'),
+                addHostBtn: document.getElementById('add-host-btn'),
+                hostModal: {
+                    overlay: document.getElementById('host-modal'),
+                    form: document.getElementById('host-form'),
+                    cancelBtn: document.getElementById('cancel-host-btn'),
+                    hostnameInput: document.getElementById('hostname'),
+                    ipInput: document.getElementById('ip_address'),
+                    macInput: document.getElementById('mac_address'),
+                    notesInput: document.getElementById('notes'),
+                },
+                confirmModal: {
+                    overlay: document.getElementById('confirm-modal'),
+                    cancelBtn: document.getElementById('cancel-delete-btn'),
+                    confirmBtn: document.getElementById('confirm-delete-btn'),
+                    message: document.getElementById('confirm-message'),
+                },
+                contactForm: document.getElementById('contact-form'),
+                alertModal: {
+                    overlay: document.getElementById('alert-modal'),
+                    message: document.getElementById('alert-message'),
+                    okBtn: document.getElementById('alert-ok-btn'),
+                },
+                readMoreLinks: document.querySelectorAll('.read-more'),
+            };
+
+            // --- State Management ---
+            let hosts = [
+                { id: 1, hostname: 'HOMELAB-DC01', ip: '192.168.1.2', mac: '00-1A-2B-3C-4D-5E', notes: 'Primary Domain Controller' },
+                { id: 2, hostname: 'PFSENSE-FW', ip: '192.168.1.1', mac: '00-1A-2B-3C-4D-5F', notes: 'Firewall/Router' },
+                { id: 3, hostname: 'TRUENAS-STORAGE', ip: '192.168.1.10', mac: '00-1A-2B-3C-4D-6A', notes: 'Primary NAS' },
+                // FIXED: Escaped the apostrophe in "Zach's"
+                { id: 4, hostname: 'DEV-WS-ZACH', ip: '192.168.1.101', mac: '00-1A-2B-3C-4D-7B', notes: 'Zach\'s Development Workstation' },
+            ];
+            let hostToDelete = null;
+
+            // --- Functions ---
+            const navigateTo = (pageId) => {
+                ui.pages.forEach(page => page.classList.remove('active'));
+                const targetPage = document.getElementById(pageId);
+                if (targetPage) targetPage.classList.add('active');
+
+                ui.navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.dataset.page === pageId) {
+                        link.classList.add('active');
+                    }
+                });
+                 window.scrollTo(0, 0);
+            };
+
+            const escapeHTML = (str) => {
+                if (typeof str !== 'string') return '';
+                const p = document.createElement('p');
+                p.textContent = str;
+                return p.innerHTML;
+            };
+
+            const renderTable = () => {
+                if (!ui.tableBody) return;
+                ui.tableBody.innerHTML = '';
+                hosts.forEach(host => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${escapeHTML(host.hostname)}</td>
+                        <td>${escapeHTML(host.ip)}</td>
+                        <td>${escapeHTML(host.mac)}</td>
+                        <td>${escapeHTML(host.notes)}</td>
+                        <td><button data-id="${host.id}" class="delete-btn">Delete</button></td>
+                    `;
+                    ui.tableBody.appendChild(row);
+                });
+            };
+
+            const showModal = (modalOverlay) => {
+                if (modalOverlay) modalOverlay.classList.add('visible');
+            };
+
+            const hideModal = (modalOverlay) => {
+                if (modalOverlay) modalOverlay.classList.remove('visible');
+            };
+            
+            const showAlert = (message) => {
+                if (ui.alertModal.message) ui.alertModal.message.textContent = message;
+                showModal(ui.alertModal.overlay);
+            };
+
+            const showConfirmModal = (hostId) => {
+                hostToDelete = hostId;
+                const host = hosts.find(h => h.id === hostId);
+                if (host) {
+                    ui.confirmModal.message.textContent = `Are you sure you want to delete host "${escapeHTML(host.hostname)}"?`;
+                    showModal(ui.confirmModal.overlay);
+                }
+            };
+
+            // --- Event Listeners ---
+            ui.navLinks.forEach(link => {
+                link.addEventListener('click', () => navigateTo(link.dataset.page));
+            });
+
+            if (ui.addHostBtn) {
+                ui.addHostBtn.addEventListener('click', () => {
+                    if (ui.hostModal.form) ui.hostModal.form.reset();
+                    showModal(ui.hostModal.overlay);
+                });
+            }
+            
+            if (ui.hostModal.form) {
+                ui.hostModal.form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const newHost = {
+                        id: Date.now(),
+                        hostname: ui.hostModal.hostnameInput.value,
+                        ip: ui.hostModal.ipInput.value,
+                        mac: ui.hostModal.macInput.value,
+                        notes: ui.hostModal.notesInput.value,
+                    };
+                    hosts.push(newHost);
+                    renderTable();
+                    hideModal(ui.hostModal.overlay);
+                });
+            }
+
+            if (ui.hostModal.cancelBtn) ui.hostModal.cancelBtn.addEventListener('click', () => hideModal(ui.hostModal.overlay));
+            if (ui.confirmModal.cancelBtn) ui.confirmModal.cancelBtn.addEventListener('click', () => hideModal(ui.confirmModal.overlay));
+            if (ui.alertModal.okBtn) ui.alertModal.okBtn.addEventListener('click', () => hideModal(ui.alertModal.overlay));
+
+            if (ui.tableBody) {
+                ui.tableBody.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('delete-btn')) {
+                        const hostId = parseInt(e.target.dataset.id, 10);
+                        showConfirmModal(hostId);
+                    }
+                });
+            }
+            
+            if (ui.confirmModal.confirmBtn) {
+                ui.confirmModal.confirmBtn.addEventListener('click', () => {
+                    if (hostToDelete !== null) {
+                        hosts = hosts.filter(host => host.id !== hostToDelete);
+                        renderTable();
+                        hideModal(ui.confirmModal.overlay);
+                        hostToDelete = null;
+                    }
+                });
+            }
+            
+            if (ui.contactForm) {
+                ui.contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    showAlert('Thank you for your inquiry! (This is a demo and does not send emails.)');
+                    ui.contactForm.reset();
+                });
+            }
+
+            if (ui.readMoreLinks) {
+                ui.readMoreLinks.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        showAlert('Full article is not available in this demo.');
+                    });
+                });
+            }
+
+            // --- Initial Load ---
+            renderTable();
+            navigateTo('home');
+        });
+    </script>
+</body>
+</html>

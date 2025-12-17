@@ -1,0 +1,1 @@
+Invoke-PS2EXE -InputFile "S:\Projects\MP3 Editor\MP3Toolkit.ps1" -OutputFile "S:\Projects\MP3 Editor\EliteMP3Toolkit.exe" -Icon "S:\Projects\MP3 Editor\Resources\App-Icon.ico" -NoConsole -sta -title "EliteSoftware MP3 Toolkit" -version "1.9.2.0"

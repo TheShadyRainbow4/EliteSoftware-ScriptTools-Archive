@@ -84,6 +84,8 @@ To run this script, you will need:
 ## 🪪 License
 Distributed under the MIT License. See LICENSE.txt for more information.
 
+This project utilizes the **TagLibSharp** library, which is licensed under the **LGPL 2.1**. Please refer to [THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt) and [TagLibSharp-LICENSE.txt](TagLibSharp-LICENSE.txt) in this directory for full legal details and attribution.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## ☎️ Contact

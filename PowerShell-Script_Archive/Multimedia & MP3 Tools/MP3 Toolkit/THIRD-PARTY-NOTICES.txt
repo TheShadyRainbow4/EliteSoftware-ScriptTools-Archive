@@ -1,0 +1,22 @@
+THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
+----------------------------------------------
+
+This project incorporates the following third-party software:
+
+1. TagLibSharp
+   - Version: 2.3.0
+   - Source: https://github.com/mono/taglib-sharp
+   - License: GNU Lesser General Public License v2.1 (LGPL-2.1)
+   - Copyright (c) 2006-2007 Brian Nickel.
+   - Copyright (c) 2009-2020 Other contributors.
+
+   MODIFICATION NOTICE:
+   The TagLibSharp library included in this distribution (specifically within the 'lib' directory) is an UNMODIFIED copy of the official binary release obtained via NuGet (taglibsharp.2.3.0.nupkg). No changes have been made to the source code or the compiled binary of this library by EliteSoftware or Zachary Whiteman.
+
+   LICENSE INFORMATION:
+   TagLibSharp is licensed under the LGPL 2.1. A copy of this license is provided in the file "TagLibSharp-LICENSE.txt" located in this directory.
+   
+   You may obtain the source code for TagLibSharp from the official repository:
+   https://github.com/mono/taglib-sharp
+
+----------------------------------------------
