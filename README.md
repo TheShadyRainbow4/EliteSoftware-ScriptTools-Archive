@@ -1,6 +1,17 @@
+
+
+<!-- EliteSoftware Co. LOGO -->
+
+
+
+<br />
 <div align="center">
-<a href='https://i.postimg.cc/DZTjtNg1/Elite-Software-Company-Simulator-LOGO.png' target='_blank'><img src='https://i.postimg.cc/DZTjtNg1/Elite-Software-Company-Simulator-LOGO.png' border='0' alt='Elite-Software-Client' width="200"></a>
+<a href="Logo">
+<img src="https://i.postimg.cc/85MDTcrJ/Elite-Software-LOGO-Mocup2.png" alt="Logo" width="256" height="256">
+</a>
 </div>
+
+
 
 
 
@@ -160,4 +171,8 @@ Before using the EliteSoftware Script Tools, ensure you have the following insta
 ---
 
 ## **📂 Repository Structure**
+
+<div align="center">
+<a href='https://i.postimg.cc/DZTjtNg1/Elite-Software-Company-Simulator-LOGO.png' target='_blank'><img src='https://i.postimg.cc/DZTjtNg1/Elite-Software-Company-Simulator-LOGO.png' border='0' alt='Elite-Software-Client' width="200"></a>
+</div>
 
