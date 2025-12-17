@@ -269,9 +269,7 @@ Before using the EliteSoftware Script Tools, ensure you have the following insta
 
 ## **📂 Repository Structure**
 
-EliteSoftware-ScriptTools-Archive/ ├── Readme.md # This comprehensive documentation ├── scripts/ # Main scripts directory │ ├── python/ # Python-based utilities │ ├── bash/ # Bash shell scripts │ ├── nodejs/ # Node.js applications │ └── powershell/ # PowerShell scripts ├── docs/ # Detailed documentation ├── examples/ # Usage examples ├── tests/ # Test suite └── config/ # Configuration templates
-
-
+Will Update Section Later! ;)
 ---
 
 ## **📝 Usage Guidelines**
