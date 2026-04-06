@@ -1,0 +1,10 @@
+{
+  "Message": "Script started. Logging system initialized.",
+  "Timestamp": "2025-12-17T07:40:22",
+  "Severity": "INFO"
+}
+{
+  "Message": "Win-PS2EXE module missing. Please install it using 'Install-Module Win-PS2EXE -Scope CurrentUser'.",
+  "Timestamp": "2025-12-17T07:40:22",
+  "Severity": "ERROR"
+}

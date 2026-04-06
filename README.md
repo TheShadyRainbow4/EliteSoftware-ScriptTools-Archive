@@ -33,10 +33,20 @@ A comprehensive collection of scripting utilities designed to streamline develop
 <img src="https://img.shields.io/badge/PowerShell-Core-5391FE?logo=powershell&logoColor=white" alt="PowerShell">
 </p>
 
+## ❄️ The Cryostasis State
+
+> **Note:** Most of the 78+ tools in this archive were developed "just for the hell of it" or abandoned when feature creep won the war. They are currently frozen in time.
+
+**HOWEVER:**
+
+* **If you find a tool here that looks cool but errors out:** OPEN AN ISSUE.
+* **If you want a feature added:** OPEN AN ISSUE.
+
+*I literally just need an excuse. If you show interest, I will break out the IDE and fix it. Your bug report is the only thing standing between this script staying broken and it becoming v2.0. Don't be shy—spam me.*
 
 
 ## **🚀 Overview**
-<details>
+<details open>
 <summary><b>📚 Project Documentation Index</b></summary>
 <br>
 
@@ -269,9 +279,7 @@ Before using the EliteSoftware Script Tools, ensure you have the following insta
 
 ## **📂 Repository Structure**
 
-EliteSoftware-ScriptTools-Archive/ ├── Readme.md # This comprehensive documentation ├── scripts/ # Main scripts directory │ ├── python/ # Python-based utilities │ ├── bash/ # Bash shell scripts │ ├── nodejs/ # Node.js applications │ └── powershell/ # PowerShell scripts ├── docs/ # Detailed documentation ├── examples/ # Usage examples ├── tests/ # Test suite └── config/ # Configuration templates
-
-
+Will Update Section Later! ;)
 ---
 
 ## **📝 Usage Guidelines**
