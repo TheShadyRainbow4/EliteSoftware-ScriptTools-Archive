@@ -1,4 +1,4 @@
-*.lnk
+﻿*.lnk
 desktop.ini
 gemini.md
 .git
@@ -34,7 +34,6 @@ obj/
 *.iso
 *.cab
 *.msi
-*.exe
 *.dll
 *.pdb
 *.log
