@@ -15,3 +15,31 @@ Untitled (2).PS1
 /PowerShell-Script_Archive/Multimedia & MP3 Tools/MP3 Toolkit/MP3Toolkit_Config/Log Files
 /Elite-BuildTool/Elite-BuildTool_Config/Log Files
 /Elite-BuildTool/BACKUPS
+
+
+# Default .gitignore by Antigravity Automation
+# Default .gitignore by Antigravity Automation
+node_modules/
+dist/
+dist-electron/
+dist_electron/
+release/
+out/
+bin/
+obj/
+*.zip
+*.7z
+*.rar
+*.wim
+*.iso
+*.cab
+*.msi
+*.exe
+*.dll
+*.pdb
+*.log
+*.bak
+*.apk
+*.asar
+.DS_Store
+Thumbs.db
